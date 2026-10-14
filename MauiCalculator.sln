@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuessGameApp", "GuessGameApp\GuessGameApp.csproj", "{7A6C17CE-5AE1-4153-A897-529764764186}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MauiCalculator", "MauiCalculator\MauiCalculator.csproj", "{7A6C17CE-5AE1-4153-A897-529764764186}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
