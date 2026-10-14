@@ -40,9 +40,9 @@ Rather than only implementing arithmetic operations, I also focused on interacti
 
 ## Features
 
-| Feature | Status |
-| --- | :---: |
-| Addition, subtraction, multiplication and division
+| Feature | 
+| --- | 
+| Addition, subtraction, multiplication and division 
 | Decimal number input 
 | Square operation 
 | Square root operation 
