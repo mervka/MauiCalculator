@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace GuessGameApp;
+namespace MauiCalculator;
 
 public partial class MainPage : ContentPage
 {
@@ -106,12 +106,12 @@ public partial class MainPage : ContentPage
         {
             if (!string.IsNullOrWhiteSpace(FirstNumberEntry.Text))
             {
-                //umarım olursun
+                
                 if (!FirstNumberEntry.Text.EndsWith("²"))
                     FirstNumberEntry.Text += "²";
             }
 
-            _currentOperation = "^2";  //aktif ettik umarım
+            _currentOperation = "^2";  
         }
         else
         {
@@ -155,7 +155,7 @@ public partial class MainPage : ContentPage
         if (string.IsNullOrWhiteSpace(input))
             return 0;
 
-        // kare
+        
         if (input.EndsWith("²"))
         {
             string numberPart = input.Replace("²", "");
@@ -163,7 +163,7 @@ public partial class MainPage : ContentPage
                 return Math.Pow(n, 2);
         }
 
-        // karekok
+        
         if (input.StartsWith("√"))
         {
             string numberPart = input.Replace("√", "");
@@ -180,9 +180,6 @@ public partial class MainPage : ContentPage
     
     private void OnCalculateClicked(object sender, EventArgs e)
     {
-       
-        System.Diagnostics.Debug.WriteLine($"DEBUG: First Number Entry Text is '{FirstNumberEntry.Text}'");
-        System.Diagnostics.Debug.WriteLine($"DEBUG: Second Number Entry Text is '{SecondNumberEntry.Text}'");
         
         _firstNumber = ParseNumber(FirstNumberEntry.Text);
         _secondNumber = ParseNumber(SecondNumberEntry.Text);
