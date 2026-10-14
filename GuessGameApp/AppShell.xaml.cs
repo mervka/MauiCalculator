@@ -1,4 +1,4 @@
-﻿namespace GuessGameApp;
+﻿namespace MauiCalculator;
 
 public partial class AppShell : Shell
 {
