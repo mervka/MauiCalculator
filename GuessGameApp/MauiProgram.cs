@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace GuessGameApp;
+namespace MauiCalculator;
 
 public static class MauiProgram
 {
