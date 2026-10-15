@@ -34,8 +34,6 @@ Rather than only implementing arithmetic operations, I also focused on interacti
   <img src="docs/screenshots/calculator-main.png" width="320" alt="MauiCalculator main screen">
 </p>
 
-> A short demo GIF will be added here.
-
 ---
 
 ## Features
