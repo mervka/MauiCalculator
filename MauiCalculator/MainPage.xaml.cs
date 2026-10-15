@@ -6,7 +6,7 @@ public partial class MainPage : ContentPage
 {
     private double _firstNumber;
     private double _secondNumber;
-    private string _currentOperation;
+    private string _currentOperation = string.Empty;
     private Button? _lastSelectedButton;
     private string _activeField = "first";
 
@@ -27,10 +27,10 @@ public partial class MainPage : ContentPage
     private void OnOperationClicked(object sender, EventArgs e)
     {
         if (_lastSelectedButton != null)
-            _lastSelectedButton.BackgroundColor = (Color)Application.Current.Resources["OperationButtonColor"];
+            _lastSelectedButton.BackgroundColor = (Color)Application.Current!.Resources["OperationButtonColor"];
         Button button = (Button)sender;
         _currentOperation = NormalizeOp(button.Text);
-        button.BackgroundColor = (Color)Application.Current.Resources["AccentCyan"];
+        button.BackgroundColor = (Color)Application.Current!.Resources["AccentCyan"];
         _lastSelectedButton = button;
     }
     
@@ -39,16 +39,15 @@ public partial class MainPage : ContentPage
     {
         ResultLabel.Text = "0";
         ExpressionLabel.Text = "";
-        _currentOperation = "";
         FirstNumberEntry.Text = string.Empty;
         SecondNumberEntry.Text = string.Empty;
         
         _firstNumber = 0;
         _secondNumber = 0;
         _currentOperation = string.Empty;
-        
+
         if (_lastSelectedButton != null)
-            _lastSelectedButton.BackgroundColor = (Color)Application.Current.Resources["OperationButtonColor"];
+            _lastSelectedButton.BackgroundColor = (Color)Application.Current!.Resources["OperationButtonColor"];
     }
     
     private void OnClearEntryClicked(object sender, EventArgs e)
@@ -111,7 +110,7 @@ public partial class MainPage : ContentPage
                     FirstNumberEntry.Text += "²";
             }
 
-            _currentOperation = "^2";  
+             
         }
         else
         {
@@ -121,7 +120,7 @@ public partial class MainPage : ContentPage
                     SecondNumberEntry.Text += "²";
             }
 
-            _currentOperation = "^2";
+            
         }
     }
 
@@ -136,7 +135,7 @@ public partial class MainPage : ContentPage
                     FirstNumberEntry.Text = "√" + FirstNumberEntry.Text;
             }
 
-            _currentOperation = "sqrt";
+            
         }
         else
         {
@@ -146,7 +145,7 @@ public partial class MainPage : ContentPage
                     SecondNumberEntry.Text = "√" + SecondNumberEntry.Text;
             }
 
-            _currentOperation = "sqrt";
+            
         }
     }
     
@@ -174,7 +173,7 @@ public partial class MainPage : ContentPage
         if (double.TryParse(input, out double normal))
             return normal;
 
-        return 0;
+        return double.NaN;
     }
 
     

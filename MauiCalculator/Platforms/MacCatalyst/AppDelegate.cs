@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace GuessGameApp;
+namespace MauiCalculator;
 
 [Register("AppDelegate")]
 public class AppDelegate : MauiUIApplicationDelegate

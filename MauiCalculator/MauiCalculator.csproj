@@ -9,6 +9,11 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
 
+        <MauiVersion>8.0.3</MauiVersion>
+
+        <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
+        <TargetSdkVersion>34</TargetSdkVersion>
+
         <!-- ✅ Android ayarları -->
         <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
         <TargetSdkVersion>34</TargetSdkVersion>
@@ -17,7 +22,7 @@
     <!-- App metadata -->
     <PropertyGroup>
         <ApplicationTitle>MauiCalculator</ApplicationTitle>
-        <ApplicationId>com.companyname.mauicalculator</ApplicationId>
+        <ApplicationId>com.mervka.mauicalculator</ApplicationId>
     </PropertyGroup>
 
     <ItemGroup>

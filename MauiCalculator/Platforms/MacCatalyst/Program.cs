@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace GuessGameApp;
+namespace MauiCalculator;
 
 public class Program
 {
