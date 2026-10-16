@@ -26,11 +26,15 @@ public partial class MainPage : ContentPage
     
     private void OnOperationClicked(object sender, EventArgs e)
     {
-        if (_lastSelectedButton != null)
-            _lastSelectedButton.BackgroundColor = (Color)Application.Current!.Resources["OperationButtonColor"];
+        if (_lastSelectedButton != null &&
+            Application.Current!.Resources.TryGetValue("OperationButtonColor", out var operationColor))
+        {
+            _lastSelectedButton.BackgroundColor = (Color)operationColor;
+        }
         Button button = (Button)sender;
         _currentOperation = NormalizeOp(button.Text);
-        button.BackgroundColor = (Color)Application.Current!.Resources["AccentCyan"];
+        if (Application.Current!.Resources.TryGetValue("AccentCyan", out var accentColor))
+            button.BackgroundColor = (Color)accentColor;
         _lastSelectedButton = button;
     }
     
@@ -46,8 +50,11 @@ public partial class MainPage : ContentPage
         _secondNumber = 0;
         _currentOperation = string.Empty;
 
-        if (_lastSelectedButton != null)
-            _lastSelectedButton.BackgroundColor = (Color)Application.Current!.Resources["OperationButtonColor"];
+        if (_lastSelectedButton != null &&
+            Application.Current!.Resources.TryGetValue("OperationButtonColor", out var operationColor))
+        {
+            _lastSelectedButton.BackgroundColor = (Color)operationColor;
+        }
     }
     
     private void OnClearEntryClicked(object sender, EventArgs e)
